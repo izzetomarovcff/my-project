@@ -1,3 +1,6 @@
+::-webkit-scrollbar {
+  width: 0px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
   margin: 0;
@@ -57,11 +60,46 @@
   font-size: 25px;
 }
 .main-card .tasks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 80%;
-  min-height: 100px;
+  max-height: 200px;
   border: 1px solid #C4C4C4;
   margin-bottom: 20px;
   border-radius: 5px;
+  overflow-y: scroll;
+}
+.main-card .tasks .task{
+  border: 1px solid #C4C4C4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.main-card .tasks .task .tasktext{
+  font-size: 25px;
+  margin-left: 5px;
+  margin-top: -5px;
+}
+.events{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+}
+.events div:first-child{
+  margin-right: 5px;
+}
+
+.main-card .tasks .task img{
+  width: 25px;
 }
 .main-card .add{
   background-color: #833AE0;
