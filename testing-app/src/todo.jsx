@@ -10,9 +10,9 @@ function Todo() {
         setTaskText("")
     }
     const handleAdd = () => {
-        if(taskText == ""){
+        if (taskText == "") {
             alert("Please Type Task!")
-        }else{
+        } else {
             let arr = []
             arr = [...myArray]
             arr.unshift(taskText)
@@ -20,7 +20,14 @@ function Todo() {
             setHaveTask(true)
             setTaskText("")
         }
-        
+    }
+    const handleDelete = (index) => {
+        let arr = [...myArray]
+        arr.splice(index, 1)
+        setMyArray(arr)
+        if (arr.length == 0) {
+            setHaveTask(false)
+        }
     }
 
     return (
@@ -39,8 +46,8 @@ function Todo() {
                                 <div key={index} className="task">
                                     <div className="tasktext">{task}</div>
                                     <div className="events">
-                                        <div><img src="check.png" alt="" /></div>
-                                        <div><img src="bin.png" alt="" /></div>
+                                        <div><img src="check.png" alt="" onClick={() => handleDelete(index)} /></div>
+                                        <div><img src="bin.png" alt="" onClick={() => handleDelete(index)} /></div>
                                     </div>
                                 </div>
                             )
