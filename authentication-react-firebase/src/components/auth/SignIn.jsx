@@ -15,7 +15,7 @@ const SignIn = () => {
         })
     }
     const changeRoute = () =>{
-        window.location.href = "http://localhost:3000/signup"
+        window.location.href = `${window.location.href}/signup`
     }
   return (
     <div className='sigin-in-container'>
