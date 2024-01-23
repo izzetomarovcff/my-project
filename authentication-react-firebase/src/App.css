@@ -128,4 +128,12 @@ body{
   h1{
     font-size: 5vw;
   }
+  .sigin-in-container form input{
+    font-size: 5vw;
+  }
+  .sigin-in-container form button{
+    font-size: 3vw;
+    width: 30vw;
+  }
+  
 }
