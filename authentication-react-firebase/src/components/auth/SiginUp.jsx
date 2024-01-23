@@ -9,15 +9,15 @@ const SiginUp = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential)=>{
             console.log(userCredential)
-            let urlArr = window.location.href.split("/")
-            window.location.href = `${urlArr[0]}`
+            let urlArr4 = window.location.href.split("/")
+            window.location.href = `${urlArr4[0]}`
         }).catch((error)=>{
             console.log(error)
         })
     }
     const changeRoute = () =>{
-        let urlArr = window.location.href.split("/")
-        window.location.href = `${urlArr[0]}/login`
+        let urlArr3 = window.location.href.split("/")
+        window.location.href = `${urlArr3[0]}/login`
     }
   return (
     <div className='sigin-in-container'>
