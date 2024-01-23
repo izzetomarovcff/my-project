@@ -15,13 +15,13 @@ const SignIn = () => {
         })
     }
     const changeRoute = () =>{
-        let urlArr2 = window.location.href.split("/")
-        window.location.href = `${urlArr2[0]}/signup`
+        
+        window.location.href = `/signup`
     }
   return (
     <div className='sigin-in-container'>
         <form onSubmit={signIn}>
-            <h1>Log In To Your Account</h1>
+            <h1>Log In</h1>
             <input type="text" name="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='Email'/>
             <input type="password" name="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='Password'/>
             <button type="submit">Log In</button>

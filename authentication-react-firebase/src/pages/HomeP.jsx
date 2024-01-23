@@ -11,7 +11,7 @@ function HomeP() {
                 
             }else{
                 setAuthUser(null)
-                window.location.href = `${window.location.href}/login`
+                window.location.href = `/login`
                 
             }
         });

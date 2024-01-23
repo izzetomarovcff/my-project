@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 body{
   height: 100vh;
@@ -108,4 +109,23 @@ body{
 .homepage button:hover{
   background-color: #fff;
   color: #000;
+}
+@media only screen and (max-width: 767px){
+  .app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sigin-in-container{
+    width: 80%;
+  }
+  .sigin-in-container form{
+    width: 100%;
+  }
+  .sigin-in-container form input{
+    width: 100%;
+  }
+  h1{
+    font-size: 5vw;
+  }
 }
