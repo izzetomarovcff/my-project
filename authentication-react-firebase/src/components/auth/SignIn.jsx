@@ -15,7 +15,8 @@ const SignIn = () => {
         })
     }
     const changeRoute = () =>{
-        window.location.href = `${window.location.href}/signup`
+        let urlArr = window.location.href.split("/")
+        window.location.href = `${urlArr[0]}/signup`
     }
   return (
     <div className='sigin-in-container'>
