@@ -9,8 +9,8 @@ const SiginUp = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential)=>{
             console.log(userCredential)
-            let urlArr4 = window.location.href.split("/")
-            window.location.href = `${urlArr4[0]}`
+            
+            window.location.href = `/`
         }).catch((error)=>{
             console.log(error)
         })

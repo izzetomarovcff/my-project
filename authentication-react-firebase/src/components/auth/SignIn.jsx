@@ -9,8 +9,7 @@ const SignIn = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential)=>{
             console.log(userCredential)
-            let urlArr1 = window.location.href.split("/")
-            window.location.href = `${urlArr1[0]}`
+            window.location.href = `/`
         }).catch((error)=>{
             console.log(error)
         })
