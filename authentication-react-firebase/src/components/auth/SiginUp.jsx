@@ -9,13 +9,15 @@ const SiginUp = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential)=>{
             console.log(userCredential)
-            window.location.href = "http://localhost:3000/" // view
+            let urlArr = window.location.href.split("/")
+            window.location.href = `${urlArr[0]}`
         }).catch((error)=>{
             console.log(error)
         })
     }
     const changeRoute = () =>{
-        window.location.href = `${window.location.href}/login`
+        let urlArr = window.location.href.split("/")
+        window.location.href = `${urlArr[0]}/login`
     }
   return (
     <div className='sigin-in-container'>

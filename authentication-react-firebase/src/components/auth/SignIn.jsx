@@ -9,7 +9,8 @@ const SignIn = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential)=>{
             console.log(userCredential)
-            window.location.href = "http://localhost:3000/"
+            let urlArr = window.location.href.split("/")
+            window.location.href = `${urlArr[0]}`
         }).catch((error)=>{
             console.log(error)
         })
